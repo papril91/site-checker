@@ -10,8 +10,8 @@ dotenv.config();
 
 const emailMessage = (siteUrl) => {
   const mailOptions = {
-    from: 'site-checker@kwiecien.dev',
-    to: 'kwiecienpatryk@gmail.com',
+    from: process.env.MAIL_SENDER,
+    to: process.env.MAIL_RECIPIENT,
     subject: `Unavailable: ${siteUrl}`,
     text: `This site ${siteUrl} is unavailable`
   };
